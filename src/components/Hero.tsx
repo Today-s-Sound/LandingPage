@@ -2,156 +2,129 @@ import { Play, Bell, Globe, Smartphone } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Animated Circles */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl animate-pulse-slow animate-delay-500" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-surface" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[120px]" />
 
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px]" />
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-6xl mx-auto px-6 pt-28 pb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-              </span>
-              <span className="text-sm text-text-secondary">
-                시각장애인을 위한 맞춤형 서비스
-              </span>
-            </div>
-
-            {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-slide-up">
-              들리는 웹의 변화,
-              <br />
-              <span className="text-gradient">들려주는 웹의 소리</span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-text-secondary max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed animate-slide-up animate-delay-200">
-              중요한 정보 변화를 놓치지 마세요.
-              <br className="hidden sm:block" />
-              오늘의 소리가 실시간으로 알려드립니다.
+            <p className="text-primary text-sm font-medium mb-4">
+              시각장애인을 위한 맞춤형 서비스
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-slide-up animate-delay-300">
+            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+              웹의 변화를
+              <br />
+              <span className="text-primary">소리로 전달합니다</span>
+            </h1>
+
+            <p className="text-lg text-text-secondary max-w-md mx-auto lg:mx-0 mb-8">
+              구독한 웹페이지의 업데이트를 실시간으로 감지하고 음성으로
+              알려드립니다.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
               <a
                 href="#download"
-                className="btn-primary flex items-center justify-center gap-3"
+                className="bg-primary text-black px-6 py-3 rounded-xl font-medium hover:bg-primary-light transition-colors flex items-center justify-center gap-2"
               >
-                <Smartphone size={20} />
-                <span>앱 다운로드</span>
+                <Smartphone size={18} />앱 다운로드
               </a>
               <a
                 href="#features"
-                className="btn-secondary flex items-center justify-center gap-3"
+                className="text-white px-6 py-3 rounded-xl font-medium border border-white/10 hover:bg-white/5 transition-colors flex items-center justify-center gap-2"
               >
-                <Play size={20} />
-                <span>기능 알아보기</span>
+                <Play size={18} />
+                기능 알아보기
               </a>
             </div>
 
-            {/* Key Features */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6 animate-slide-up animate-delay-400">
-              <div className="flex items-center gap-2 text-text-secondary">
-                <div className="w-2 h-2 rounded-full bg-green-400" />
-                <span className="text-sm">실시간 알림</span>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-text-secondary">
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                <span>실시간 알림</span>
               </div>
-              <div className="flex items-center gap-2 text-text-secondary">
-                <div className="w-2 h-2 rounded-full bg-green-400" />
-                <span className="text-sm">AI 요약</span>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                <span>AI 요약</span>
               </div>
-              <div className="flex items-center gap-2 text-text-secondary">
-                <div className="w-2 h-2 rounded-full bg-green-400" />
-                <span className="text-sm">TTS 재생</span>
+              <div className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                <span>TTS 재생</span>
               </div>
             </div>
           </div>
 
           {/* Right Content - Phone Mockup */}
-          <div className="relative flex justify-center animate-fade-in animate-delay-300">
-            {/* Glow Effect */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-primary/30 rounded-full blur-[100px]" />
-
-            {/* Phone */}
-            <div className="relative w-[300px] sm:w-[320px] h-[620px] bg-surface rounded-[3rem] border-[8px] border-surface-lighter shadow-2xl overflow-hidden animate-float">
+          <div className="flex justify-center">
+            <div className="relative w-[280px] h-[580px] bg-black rounded-[2.5rem] border-[6px] border-neutral-800 shadow-2xl overflow-hidden">
               {/* Notch */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-surface-lighter rounded-b-2xl z-20" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-black rounded-b-xl z-20" />
 
               {/* Screen */}
               <div className="w-full h-full bg-surface-light flex flex-col">
                 {/* App Header */}
-                <div className="pt-12 px-5 pb-5 bg-gradient-to-b from-primary/20 to-transparent">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                        <Bell className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="text-white font-bold">오늘의 소리</span>
+                <div className="pt-10 px-4 pb-4 bg-gradient-to-b from-primary/10 to-transparent">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center">
+                      <Bell className="w-3.5 h-3.5 text-black" />
                     </div>
-                    <div className="w-8 h-8 rounded-full bg-white/10" />
+                    <span className="text-white font-semibold text-sm">
+                      오늘의 소리
+                    </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white">오늘의 알림</h3>
-                  <p className="text-text-muted text-sm">새로운 업데이트 3건</p>
+                  <h3 className="text-lg font-bold text-white">오늘의 알림</h3>
+                  <p className="text-text-muted text-xs">새로운 업데이트 3건</p>
                 </div>
 
                 {/* Notification Cards */}
-                <div className="flex-1 px-4 py-4 space-y-3 overflow-hidden">
-                  {/* Card 1 */}
-                  <div className="glass rounded-2xl p-4 transform hover:scale-[1.02] transition-transform">
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-red-500/20 flex items-center justify-center flex-shrink-0">
-                        <Bell className="w-5 h-5 text-red-400" />
+                <div className="flex-1 px-4 py-2 space-y-2.5 overflow-hidden">
+                  <div className="bg-white/5 rounded-xl p-3 border border-white/5">
+                    <div className="flex items-start gap-2.5">
+                      <div className="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0">
+                        <Bell className="w-4 h-4 text-orange-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs px-2 py-0.5 bg-red-500/20 text-red-400 rounded-full">
-                            긴급
-                          </span>
-                        </div>
-                        <p className="text-white text-sm font-medium truncate">
+                        <span className="text-[10px] px-1.5 py-0.5 bg-orange-500/20 text-orange-400 rounded">
+                          긴급
+                        </span>
+                        <p className="text-white text-xs font-medium mt-1 truncate">
                           새로운 공지사항이 등록되었습니다
                         </p>
-                        <p className="text-text-muted text-xs">구독 페이지</p>
+                        <p className="text-text-muted text-[10px]">
+                          구독 페이지
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Card 2 */}
-                  <div className="glass rounded-2xl p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <Globe className="w-5 h-5 text-primary-light" />
+                  <div className="bg-white/5 rounded-xl p-3 border border-white/5">
+                    <div className="flex items-start gap-2.5">
+                      <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <Globe className="w-4 h-4 text-primary" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-white text-sm font-medium truncate">
+                        <p className="text-white text-xs font-medium truncate">
                           페이지 업데이트 감지
                         </p>
-                        <p className="text-text-muted text-xs">뉴스 구독</p>
+                        <p className="text-text-muted text-[10px]">뉴스 구독</p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Card 3 */}
-                  <div className="glass rounded-2xl p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
-                        <Globe className="w-5 h-5 text-accent" />
+                  <div className="bg-white/5 rounded-xl p-3 border border-white/5">
+                    <div className="flex items-start gap-2.5">
+                      <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <Globe className="w-4 h-4 text-primary" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-white text-sm font-medium truncate">
+                        <p className="text-white text-xs font-medium truncate">
                           키워드 알림
                         </p>
-                        <p className="text-text-muted text-xs">
+                        <p className="text-text-muted text-[10px]">
                           관심 키워드 감지
                         </p>
                       </div>
@@ -160,55 +133,15 @@ export default function Hero() {
                 </div>
 
                 {/* Play Button */}
-                <div className="p-4 border-t border-white/5">
-                  <button className="w-full bg-gradient-to-r from-primary to-accent text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
-                    <Play size={20} fill="white" />
-                    <span>모두 재생하기</span>
+                <div className="p-4">
+                  <button className="w-full bg-primary text-black py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
+                    <Play size={16} fill="black" />
+                    모두 재생하기
                   </button>
                 </div>
               </div>
             </div>
-
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 glass p-4 rounded-2xl animate-float animate-delay-200">
-              <div className="flex items-center gap-3">
-                {/* Sound Wave Animation */}
-                <div className="flex items-end gap-1 h-6">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-1 bg-accent rounded-full wave-bar"
-                      style={{ height: `${12 + Math.random() * 12}px` }}
-                    />
-                  ))}
-                </div>
-                <span className="text-white text-sm font-medium">
-                  TTS 재생 중
-                </span>
-              </div>
-            </div>
-
-            <div className="absolute -bottom-4 -left-4 glass p-4 rounded-2xl animate-float animate-delay-600">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
-                  <Bell className="w-5 h-5 text-green-400" />
-                </div>
-                <div>
-                  <div className="text-xs text-text-muted">실시간 감지</div>
-                  <div className="text-white text-sm font-bold">
-                    업데이트 발견!
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
-        <div className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center pt-2">
-          <div className="w-1 h-2 bg-white/50 rounded-full animate-pulse" />
         </div>
       </div>
     </section>
